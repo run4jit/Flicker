@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2D1A7B0B24993C8500404E5E /* MainCoordinater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A7B0A24993C8500404E5E /* MainCoordinater.swift */; };
 		2D1A7B0D2499447300404E5E /* FlickerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A7B0C2499447300404E5E /* FlickerDetailViewController.swift */; };
-		2D1A7B0F2499460C00404E5E /* FlickerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A7B0E2499460C00404E5E /* FlickerDetailViewModel.swift */; };
 		2D1A7B1124995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A7B1024995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift */; };
 		8F0AEBC821EBB119009F6192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEBC721EBB119009F6192 /* AppDelegate.swift */; };
 		8F0AEBCD21EBB119009F6192 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0AEBCB21EBB119009F6192 /* Main.storyboard */; };
@@ -58,8 +57,9 @@
 /* Begin PBXFileReference section */
 		2D1A7B0A24993C8500404E5E /* MainCoordinater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinater.swift; sourceTree = "<group>"; };
 		2D1A7B0C2499447300404E5E /* FlickerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerDetailViewController.swift; sourceTree = "<group>"; };
-		2D1A7B0E2499460C00404E5E /* FlickerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerDetailViewModel.swift; sourceTree = "<group>"; };
 		2D1A7B1024995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerViewDataSourceAndDelegates.swift; sourceTree = "<group>"; };
+		2D1A7B142499719600404E5E /* 1_5nfF7o3WNQvTPttNsi2yEQ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_5nfF7o3WNQvTPttNsi2yEQ.png; sourceTree = "<group>"; };
+		2D1A7B15249971CB00404E5E /* 1_0CQ-fXv3U-pLEZw31W5fpQ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1_0CQ-fXv3U-pLEZw31W5fpQ.png"; sourceTree = "<group>"; };
 		8F0AEBC421EBB119009F6192 /* FlickerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0AEBC721EBB119009F6192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F0AEBCC21EBB119009F6192 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,6 +149,8 @@
 		8F0AEBC621EBB119009F6192 /* FlickerMobile */ = {
 			isa = PBXGroup;
 			children = (
+				2D1A7B15249971CB00404E5E /* 1_0CQ-fXv3U-pLEZw31W5fpQ.png */,
+				2D1A7B142499719600404E5E /* 1_5nfF7o3WNQvTPttNsi2yEQ.png */,
 				2D1A7B0924993C7300404E5E /* Coordinaters */,
 				8F0AEBFF21EBB1E1009F6192 /* Models */,
 				8F0AEC0A21EBB1E1009F6192 /* Services */,
@@ -207,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				8F0AEC0021EBB1E1009F6192 /* FlickerViewModel.swift */,
-				2D1A7B0E2499460C00404E5E /* FlickerDetailViewModel.swift */,
 				8F0AEC0121EBB1E1009F6192 /* Tests */,
 				8F0AEC0821EBB1E1009F6192 /* FlickerItemViewModel.swift */,
 				8F0AEC0921EBB1E1009F6192 /* Flicker.swift */,
@@ -400,7 +401,6 @@
 				2D1A7B0D2499447300404E5E /* FlickerDetailViewController.swift in Sources */,
 				8F0AEBC821EBB119009F6192 /* AppDelegate.swift in Sources */,
 				8F0AEC1F21EBB1E2009F6192 /* FlickerService.swift in Sources */,
-				2D1A7B0F2499460C00404E5E /* FlickerDetailViewModel.swift in Sources */,
 				8F0AEC1621EBB1E2009F6192 /* FlickerViewModel.swift in Sources */,
 				8F0AEC1D21EBB1E2009F6192 /* FlickerItemViewModel.swift in Sources */,
 				2D1A7B1124995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift in Sources */,
