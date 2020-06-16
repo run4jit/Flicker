@@ -61,7 +61,7 @@ struct Photo: Codable, Equatable {
 
 extension Photo {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(Photo.self, from: data)
+        self = try JSONDecoder().decode(Photo.self, from: data)
     }
     
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -76,7 +76,7 @@ extension Photo {
     }
     
     func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
+        return try JSONEncoder().encode(self)
     }
     
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
@@ -84,21 +84,6 @@ extension Photo {
     }
 }
 
-func newJSONDecoder() -> JSONDecoder {
-    let decoder = JSONDecoder()
-    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-        decoder.dateDecodingStrategy = .iso8601
-    }
-    return decoder
-}
-
-func newJSONEncoder() -> JSONEncoder {
-    let encoder = JSONEncoder()
-    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-        encoder.dateEncodingStrategy = .iso8601
-    }
-    return encoder
-}
 
 
 
