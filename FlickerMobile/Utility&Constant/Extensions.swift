@@ -22,3 +22,23 @@ extension UICollectionViewCell
         return String(describing: self)
     }
 }
+
+
+extension UIStoryboard {
+    class var main: UIStoryboard {
+        return UIStoryboard(name: "Main", bundle: Bundle.main)
+    }
+}
+extension UIViewController {
+    class var identifier: String {
+        return String(describing: self)
+    }
+    static func instantiate() -> Self  {
+        return UIStoryboard.main.instantiateViewController(identifier: self.identifier) as! Self
+    }
+}
+
+protocol Storyboard {
+    static func instantiate() -> Self
+}
+

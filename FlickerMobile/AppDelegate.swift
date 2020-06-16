@@ -13,10 +13,15 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var mainCoordinater: MainCoordinater?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let navigationController = UINavigationController()
+        mainCoordinater = MainCoordinater(navigationController: navigationController)
+        window?.rootViewController = navigationController
+        mainCoordinater?.navigate()
+        window?.makeKeyAndVisible()
         return true
     }
 

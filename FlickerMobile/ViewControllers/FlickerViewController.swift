@@ -15,14 +15,19 @@ class FlickerViewController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var errorMessageLabel: UILabel!
     var viewModel: FlickerViewModel!
+    private lazy var dataSourceAndDelegates = FlickerViewDataSourceAndDelegates(viewModel: viewModel)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: FlickerItemCollectionViewCell.nibName, bundle: nil), forCellWithReuseIdentifier: FlickerItemCollectionViewCell.identifier)
-        viewModel = FlickerViewModel()
         viewModelBinder()
         // initial search
-        viewModel.searchText.value = "kittens"
+        viewModel.searchText.value = searchBar.text ?? "god"
+        
+        //Setup delegates & data source.
+        searchBar.delegate = dataSourceAndDelegates
+        collectionView.delegate = dataSourceAndDelegates
+        collectionView.dataSource = dataSourceAndDelegates
     }
     
     func viewModelBinder() -> Void {
@@ -53,80 +58,17 @@ class FlickerViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
-    }
-}
-
-//MARK: - Collection view data source and delegates implementations
-extension FlickerViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.itemCount
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlickerItemCollectionViewCell.identifier, for: indexPath) as? FlickerItemCollectionViewCell else { return UICollectionViewCell() }
-        cell.viewModel.value = viewModel.cellViewModels.value[indexPath.item]
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        // loading next page
-        if (viewModel.itemCount - 1) <= indexPath.item && !viewModel.isLoadingData.value {
-            viewModel.loadNextPage()
+        
+        // Bind screen title with search text
+        viewModel.screenTitle.bindAndFire { (text) in
+            self.title = text
         }
-    }
-}
-
-
-extension FlickerViewController : UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 120)
-    }
-}
-
-//MARK: - Collection view data source prefetch method implementations
-extension FlickerViewController: UICollectionViewDataSourcePrefetching {
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        // prefetching images
-        for index in indexPaths {
-            if index.item < self.viewModel.itemCount {
-                let cellViewModel = self.viewModel.cellViewModels.value[index.item]
-                cellViewModel.loadImage()
+        
+        viewModel.scrollToTop.bind { (top) in
+            if top {
+                self.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
             }
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
-        for index in indexPaths {
-            // cancel prefetched image request
-            if index.item < self.viewModel.itemCount {
-                let cellViewModel = self.viewModel.cellViewModels.value[index.item]
-                cellViewModel.cancelImageTask()
-            }
-        }
-    }
-}
-
-//MARK: - Search bar delegates implementations
-extension FlickerViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        let text = searchBar.text ?? ""
-        if viewModel.searchText.value != text {
-            collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
-            viewModel.searchText.value = text
-        }
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
     }
 }
 

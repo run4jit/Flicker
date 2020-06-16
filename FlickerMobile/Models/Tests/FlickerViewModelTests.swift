@@ -42,7 +42,7 @@ class FlickerViewModelTests: BaseFlickerTest {
         
         let exp = self.expectation(description: "Success Full Load Mock Data")
 
-        flickerViewModel.cellViewModels.bind { (cellViewModels:[FlickerItemCellViewModel]) in
+        flickerViewModel.cellViewModels.bind { (cellViewModels:[FlickerItemViewModel]) in
             XCTAssertEqual(cellViewModels.count, 99, "Cell must have 99 items.")
             let item = cellViewModels.first
             XCTAssertNotNil(item)

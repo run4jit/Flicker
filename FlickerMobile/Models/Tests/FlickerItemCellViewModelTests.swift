@@ -25,14 +25,14 @@ class FlickerItemCellViewModelTests: BaseFlickerTest {
         let imageMockSession = MockURLSession()
         
         imageMockSession.data = self.dataFromContaintOf(file: "cat1", type: "png")
-        let expectedFirstCellViewModel = FlickerItemCellViewModel(photo, serviceManager: FlickerServiceManager(session: imageMockSession))
+        let expectedFirstCellViewModel = FlickerItemViewModel(photo, serviceManager: FlickerServiceManager(session: imageMockSession))
         
         setupMockupSessionWith(file: "FlickerTestData", ofType: "json")
         let flickerViewModel = FlickerViewModel(FlickerServiceManager(session: mockSession))
         
         let exp = self.expectation(description: "Success Full Load Mock Data")
         
-        flickerViewModel.cellViewModels.bind { (cellViewModels:[FlickerItemCellViewModel]) in
+        flickerViewModel.cellViewModels.bind { (cellViewModels:[FlickerItemViewModel]) in
             XCTAssertEqual(cellViewModels.count, 99, "Cell must have 99 items.")
             let firstItem = cellViewModels.first
             XCTAssertNotNil(firstItem)

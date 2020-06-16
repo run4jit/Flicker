@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1A7B0B24993C8500404E5E /* MainCoordinater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A7B0A24993C8500404E5E /* MainCoordinater.swift */; };
+		2D1A7B0D2499447300404E5E /* FlickerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A7B0C2499447300404E5E /* FlickerDetailViewController.swift */; };
+		2D1A7B0F2499460C00404E5E /* FlickerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A7B0E2499460C00404E5E /* FlickerDetailViewModel.swift */; };
+		2D1A7B1124995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A7B1024995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift */; };
 		8F0AEBC821EBB119009F6192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEBC721EBB119009F6192 /* AppDelegate.swift */; };
 		8F0AEBCD21EBB119009F6192 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0AEBCB21EBB119009F6192 /* Main.storyboard */; };
 		8F0AEBD221EBB11B009F6192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F0AEBD121EBB11B009F6192 /* Assets.xcassets */; };
@@ -18,7 +22,7 @@
 		8F0AEC1421EBB1E2009F6192 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEBFD21EBB1E1009F6192 /* Observable.swift */; };
 		8F0AEC1521EBB1E2009F6192 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEBFE21EBB1E1009F6192 /* Utility.swift */; };
 		8F0AEC1621EBB1E2009F6192 /* FlickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEC0021EBB1E1009F6192 /* FlickerViewModel.swift */; };
-		8F0AEC1D21EBB1E2009F6192 /* FlickerItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEC0821EBB1E1009F6192 /* FlickerItemCellViewModel.swift */; };
+		8F0AEC1D21EBB1E2009F6192 /* FlickerItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEC0821EBB1E1009F6192 /* FlickerItemViewModel.swift */; };
 		8F0AEC1E21EBB1E2009F6192 /* Flicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEC0921EBB1E1009F6192 /* Flicker.swift */; };
 		8F0AEC1F21EBB1E2009F6192 /* FlickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEC0B21EBB1E1009F6192 /* FlickerService.swift */; };
 		8F0AEC2021EBB1E2009F6192 /* FlickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0AEC0D21EBB1E1009F6192 /* FlickerViewController.swift */; };
@@ -52,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D1A7B0A24993C8500404E5E /* MainCoordinater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinater.swift; sourceTree = "<group>"; };
+		2D1A7B0C2499447300404E5E /* FlickerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerDetailViewController.swift; sourceTree = "<group>"; };
+		2D1A7B0E2499460C00404E5E /* FlickerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerDetailViewModel.swift; sourceTree = "<group>"; };
+		2D1A7B1024995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerViewDataSourceAndDelegates.swift; sourceTree = "<group>"; };
 		8F0AEBC421EBB119009F6192 /* FlickerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0AEBC721EBB119009F6192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F0AEBCC21EBB119009F6192 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +84,7 @@
 		8F0AEC0521EBB1E1009F6192 /* UnexpenctedResponse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UnexpenctedResponse.txt; sourceTree = "<group>"; };
 		8F0AEC0621EBB1E1009F6192 /* FlickerItemCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickerItemCellViewModelTests.swift; sourceTree = "<group>"; };
 		8F0AEC0721EBB1E1009F6192 /* FlickerTestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FlickerTestData.json; sourceTree = "<group>"; };
-		8F0AEC0821EBB1E1009F6192 /* FlickerItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickerItemCellViewModel.swift; sourceTree = "<group>"; };
+		8F0AEC0821EBB1E1009F6192 /* FlickerItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickerItemViewModel.swift; sourceTree = "<group>"; };
 		8F0AEC0921EBB1E1009F6192 /* Flicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flicker.swift; sourceTree = "<group>"; };
 		8F0AEC0B21EBB1E1009F6192 /* FlickerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickerService.swift; sourceTree = "<group>"; };
 		8F0AEC0D21EBB1E1009F6192 /* FlickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickerViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1A7B0924993C7300404E5E /* Coordinaters */ = {
+			isa = PBXGroup;
+			children = (
+				2D1A7B0A24993C8500404E5E /* MainCoordinater.swift */,
+			);
+			path = Coordinaters;
+			sourceTree = "<group>";
+		};
 		8F0AEBBB21EBB119009F6192 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +149,7 @@
 		8F0AEBC621EBB119009F6192 /* FlickerMobile */ = {
 			isa = PBXGroup;
 			children = (
+				2D1A7B0924993C7300404E5E /* Coordinaters */,
 				8F0AEBFF21EBB1E1009F6192 /* Models */,
 				8F0AEC0A21EBB1E1009F6192 /* Services */,
 				8F0AEBF821EBB1E1009F6192 /* Utility&Constant */,
@@ -190,8 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				8F0AEC0021EBB1E1009F6192 /* FlickerViewModel.swift */,
+				2D1A7B0E2499460C00404E5E /* FlickerDetailViewModel.swift */,
 				8F0AEC0121EBB1E1009F6192 /* Tests */,
-				8F0AEC0821EBB1E1009F6192 /* FlickerItemCellViewModel.swift */,
+				8F0AEC0821EBB1E1009F6192 /* FlickerItemViewModel.swift */,
 				8F0AEC0921EBB1E1009F6192 /* Flicker.swift */,
 			);
 			path = Models;
@@ -222,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				8F0AEC0D21EBB1E1009F6192 /* FlickerViewController.swift */,
+				2D1A7B0C2499447300404E5E /* FlickerDetailViewController.swift */,
+				2D1A7B1024995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -377,10 +397,14 @@
 				8F0AEC1521EBB1E2009F6192 /* Utility.swift in Sources */,
 				8F0AEC1321EBB1E2009F6192 /* Extensions.swift in Sources */,
 				8F0AEC2021EBB1E2009F6192 /* FlickerViewController.swift in Sources */,
+				2D1A7B0D2499447300404E5E /* FlickerDetailViewController.swift in Sources */,
 				8F0AEBC821EBB119009F6192 /* AppDelegate.swift in Sources */,
 				8F0AEC1F21EBB1E2009F6192 /* FlickerService.swift in Sources */,
+				2D1A7B0F2499460C00404E5E /* FlickerDetailViewModel.swift in Sources */,
 				8F0AEC1621EBB1E2009F6192 /* FlickerViewModel.swift in Sources */,
-				8F0AEC1D21EBB1E2009F6192 /* FlickerItemCellViewModel.swift in Sources */,
+				8F0AEC1D21EBB1E2009F6192 /* FlickerItemViewModel.swift in Sources */,
+				2D1A7B1124995EBE00404E5E /* FlickerViewDataSourceAndDelegates.swift in Sources */,
+				2D1A7B0B24993C8500404E5E /* MainCoordinater.swift in Sources */,
 				8F0AEC1421EBB1E2009F6192 /* Observable.swift in Sources */,
 				8F0AEC1121EBB1E2009F6192 /* Constant.swift in Sources */,
 			);
@@ -499,7 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -554,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -578,7 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fidelity.FlickerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -597,7 +621,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fidelity.FlickerMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -616,7 +640,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fidelity.FlickerMoile.FlickerMobileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickerMobile.app/FlickerMobile";
 			};
@@ -636,7 +660,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fidelity.FlickerMoile.FlickerMobileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickerMobile.app/FlickerMobile";
 			};
@@ -655,7 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fidelity.FlickerMoile.FlickerMobileUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FlickerMobile;
 			};
@@ -674,7 +698,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fidelity.FlickerMoile.FlickerMobileUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FlickerMobile;
 			};

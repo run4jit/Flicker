@@ -13,7 +13,7 @@ class FlickerItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var itemImageView: UIImageView!
     
-    var viewModel: Observable<FlickerItemCellViewModel?> = Observable(nil)
+    var viewModel: Observable<FlickerItemViewModel?> = Observable(nil)
     
     
     override func awakeFromNib() {
@@ -24,7 +24,7 @@ class FlickerItemCollectionViewCell: UICollectionViewCell {
     }
     
     func viewModelBinder() {
-        viewModel.bind { (model: FlickerItemCellViewModel?) in
+        viewModel.bind { (model: FlickerItemViewModel?) in
             
             model?.item.bindAndFire(listener: {[weak self] (item: Photo) in
                 DispatchQueue.main.async {

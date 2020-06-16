@@ -13,14 +13,15 @@ import UIKit
  View model class for the Flicker collectionViewCell item.
  */
 
-class FlickerItemCellViewModel: Equatable {
+class FlickerItemViewModel: Equatable {
     
     //Data model object
     var item: Observable<Photo>
     var itemImage: Observable<UIImage?> = Observable(nil)
     private var serviceManager: FlickerServiceManager
     private var task: URLSessionDataTask? = nil
-    
+    var coordinater: MainCoordinater?
+
     init(_ item: Photo, serviceManager: FlickerServiceManager = FlickerServiceManager()) {
         self.item = Observable(item)
         self.serviceManager = serviceManager
@@ -50,7 +51,7 @@ class FlickerItemCellViewModel: Equatable {
         task?.cancel()
         task = nil
     }
-    public static func == (lhs: FlickerItemCellViewModel, rhs: FlickerItemCellViewModel) -> Bool {
+    public static func == (lhs: FlickerItemViewModel, rhs: FlickerItemViewModel) -> Bool {
         return lhs.item.value == rhs.item.value
     }
 }

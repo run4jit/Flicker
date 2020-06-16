@@ -20,7 +20,9 @@ class FlickerViewModel {
     var itemCount: Int { return self.cellViewModels.value.count }
     var searchCriteria = SearchTerm(text: "")
     private let serviceManager: FlickerServiceManager
-    
+    var screenTitle: Observable<String> = Observable("Flicker")
+    var coordinater: MainCoordinater?
+    private(set) var scrollToTop = Observable(false)
     /**
      This will initialized by service manager by dependency injection.
      */
@@ -32,14 +34,14 @@ class FlickerViewModel {
     /**
      This is collection view cell model to represent data. It is obsevable, so any changes in list will reload collection view.
      */
-    private(set) var cellViewModels: Observable<[FlickerItemCellViewModel]> = Observable([])
+    private(set) var cellViewModels: Observable<[FlickerItemViewModel]> = Observable([])
     
     /**
      This will construct view model for the cell
      */
-    private func cellViewModelFor(photos: [Photo]) -> [FlickerItemCellViewModel]  {
-        let items = photos.map { (photo) -> FlickerItemCellViewModel in
-            return FlickerItemCellViewModel(photo)
+    private func cellViewModelFor(photos: [Photo]) -> [FlickerItemViewModel]  {
+        let items = photos.map { (photo) -> FlickerItemViewModel in
+            return FlickerItemViewModel(photo)
         }
         return items
     }
@@ -50,6 +52,7 @@ class FlickerViewModel {
     private func dataBinder() {
         self.searchText.bind { (text) in
             self.searchCriteria.text = text
+            self.screenTitle.value = "Flicker(\(text))"
             self.searchCriteria.page = 0
             self.makeFlickerRequestFor(searchCriteria: self.searchCriteria)
         }
